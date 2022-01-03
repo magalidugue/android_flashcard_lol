@@ -43,34 +43,14 @@
         app:layout_constraintStart_toStartOf="@+id/AhriImageView" />
 
     <RadioGroup
-        android:id="@+id/RadioGroup"
-        android:layout_width="166dp"
-        android:layout_height="221dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="32dp"
+        android:id="@+id/radioGroup"
+        android:layout_width="188dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginBottom="115dp"
         app:layout_constraintBottom_toTopOf="@+id/Validate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/QuestionTextView"
-        app:layout_constraintVertical_bias="1.0">
-
-        <RadioButton
-            android:id="@+id/AnnieRadioButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Annie" />
-
-        <RadioButton
-            android:id="@+id/AhriadioButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ahri" />
-
-        <RadioButton
-            android:id="@+id/SonnaRadioButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sonna" />
-    </RadioGroup>
+        app:layout_constraintTop_toBottomOf="@+id/QuestionTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
