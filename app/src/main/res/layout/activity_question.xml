@@ -8,9 +8,9 @@
     tools:context=".QuestionActivity">
 
     <ImageView
-        android:id="@+id/AhriImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/HeroImageView"
+        android:layout_width="200dp"
+        android:layout_height="130dp"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,10 +24,10 @@
         android:layout_marginTop="16dp"
         android:text="Qui est ce hero ? "
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/AhriImageView"
+        app:layout_constraintEnd_toEndOf="@+id/HeroImageView"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/AhriImageView"
-        app:layout_constraintTop_toBottomOf="@+id/AhriImageView" />
+        app:layout_constraintStart_toStartOf="@+id/HeroImageView"
+        app:layout_constraintTop_toBottomOf="@+id/HeroImageView" />
 
     <Button
         android:id="@+id/Validate"
@@ -38,9 +38,9 @@
         android:visibility="visible"
         app:backgroundTint="#3F51B5"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/AhriImageView"
+        app:layout_constraintEnd_toEndOf="@+id/HeroImageView"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/AhriImageView" />
+        app:layout_constraintStart_toStartOf="@+id/HeroImageView" />
 
     <RadioGroup
         android:id="@+id/radioGroup"

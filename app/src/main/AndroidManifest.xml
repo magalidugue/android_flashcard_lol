@@ -10,9 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FlashCardLol">
         <activity
+            android:name=".LargerImage"
+            android:exported="false" />
+        <activity
             android:name=".QuestionActivity"
-            android:exported="false" >
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -21,7 +23,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 

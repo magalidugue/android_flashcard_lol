@@ -3,11 +3,13 @@ package com.magali.flashcardlol;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -29,8 +31,7 @@ public class QuestionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_question);
 
         submit = findViewById(R.id.Validate);
-
-
+        ImageView heroPictureView = findViewById(R.id.HeroImageView);
 
 
         ArrayList<String> displayedAnswers = new ArrayList<String>();
@@ -38,9 +39,8 @@ public class QuestionActivity extends AppCompatActivity {
         displayedAnswers.add("Ahri");
         displayedAnswers.add("Sonna");
 
-        Question displayedQuestion = new Question("quel est le nom de ce hero ?", displayedAnswers);
+        Question displayedQuestion = new Question("quel est le nom de ce hero ?", displayedAnswers, R.drawable.ahri);
 
-//        createRadioButton(displayedAnswers, numberOfRadioButton);
 
         final RadioGroup radioGroup = findViewById(R.id.radioGroup);
 
@@ -65,6 +65,16 @@ public class QuestionActivity extends AppCompatActivity {
             radioGroup.addView(rbs[i]);
         }
 
+        heroPictureView.setImageResource(displayedQuestion.pictureId);
+
+       heroPictureView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayLargerImage(displayedQuestion.pictureId);
+            }
+        });
+
+
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,8 +93,6 @@ public class QuestionActivity extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 
     private RadioGroup createRadioButton (final ArrayList<String> answers, int size) {
@@ -96,5 +104,11 @@ public class QuestionActivity extends AppCompatActivity {
             rg.addView(rb);
         }
         return rg;
+    }
+
+    private void displayLargerImage(int pictureId) {
+        Intent intent = new Intent(QuestionActivity.this, LargerImage.class);
+        intent.putExtra("pictureId", pictureId);
+        startActivity(intent);
     }
 }
