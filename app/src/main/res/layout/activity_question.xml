@@ -34,7 +34,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:text="Valider "
+        android:text="Valider"
         android:visibility="visible"
         app:backgroundTint="#3F51B5"
         app:layout_constraintBottom_toBottomOf="parent"
